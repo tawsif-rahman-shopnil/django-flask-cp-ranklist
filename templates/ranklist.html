@@ -4,25 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <title>Programmer's Rank-list</title>
 </head>
 <body>
-    <h1>Programmer's Rank-list</h1>
+    <h1>Programmer's Rank-list powered by Codeforces</h1>
     <table>
         <tr>
             <th>Rank</th>
             <th>ID</th>
             <th>Name</th>
-            <th>Codeforces</th>
+            <th>Institution</th>
+            <th>Codeforces Handle</th>
             <th>Rating</th>
         </tr>
-        {% for i, user in enumerate(data) %}
+        {% set counter = namespace(value=1) %}
+        {% for user in data %}
             <tr>
-                <td>{{ i + 1 }}</td>
-                <td>{{ user.id }}</td>
-                <td>{{ user.name }}</td>
+                <td>{{ counter.value }}</td>
+                <td>{{ user.handle }}</td>
+                <td>{{ user.firstName }} {{ user.lastName }}</td>
+                <td>{{ user.organization }}</td>
+                <td><a href="https://codeforces.com/profile/{{ user.handle }}" target="_blank">{{ user.handle }}</a></td>
                 <td>{{ user.rating }}</td>
             </tr>
+            {% set counter.value = counter.value + 1 %}
         {% endfor %}
     </table>
 </body>
