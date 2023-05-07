@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programmer's Rank-list</title>
+</head>
+<body>
+    <h1>Programmer's Rank-list</h1>
+    <table>
+        <tr>
+            <th>Rank</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Codeforces</th>
+            <th>Rating</th>
+        </tr>
+        {% for i, user in enumerate(data) %}
+            <tr>
+                <td>{{ i + 1 }}</td>
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.rating }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
