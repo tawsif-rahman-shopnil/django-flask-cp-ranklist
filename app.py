@@ -13,7 +13,7 @@ def ranklist():
     # Filter for Bangladeshi users and users from BAIUST
     filtered_data = [
         user for user in codeforces_data
-        if user.get("country") == "Bangladesh" or "BAIUST" in user.get("organization", "")
+        if user.get("organization") ==  "BAIUST"
     ]
 
     return render_template("ranklist.html", data=filtered_data)
