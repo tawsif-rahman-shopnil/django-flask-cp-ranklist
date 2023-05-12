@@ -18,6 +18,27 @@
     <link rel="stylesheet" type="text/css" href="static/assets/css/style.css" 
     
     />
+    <style>
+        .link-to-profile { text-decoration: none;}
+        .cf-newbie { color: gray;}
+        .cf-pupil { color: green;}
+        .cf-specialist { color: #03A89E;}
+        .cf-expert { color: blue;}
+        .cf-candidate-master { color: #a0a;}
+        .cf-master { color: #FF8C00;}
+        .cf-international-master { color: #FF8C00;}
+        .cf-grandmaster { color: red;}
+        .cf-international-grandmaster { color: red;}
+        .cf-legendary-grandmaster::first-letter { color: black;}
+        .cf-legendary-grandmaster { color: red;}
+        .cc-1star { color: gray;}
+        .cc-2star { color: green;}
+        .cc-3star { color: blue;}
+        .cc-4star { color: #684273;}
+        .cc-5star { color: yellow;}
+        .cc-6star { color: orange;}
+        .cc-7star { color: red;}
+    </style>
 </head>
 
 <body>
@@ -106,28 +127,27 @@
    
  <!--  ************************* Gallery Starts Here ************************** -->
 </br>
- <table>
+<table>
     <tr>
         <th>Rank</th>
         <th>ID</th>
         <th>Name</th>
-        <th>Institution</th>
         <th>Codeforces Handle</th>
+        <th>CodeChef Handle</th>
         <th>Rating</th>
     </tr>
-    {% set counter = namespace(value=1) %}
     {% for user in data %}
-        <tr>
-            <td>{{ counter.value }}</td>
+        <tr class="{{ user.color_class }}">
+            <td>{{ loop.index }}</td>
             <td>{{ user.handle }}</td>
             <td>{{ user.firstName }} {{ user.lastName }}</td>
-            <td>{{ user.organization }}</td>
-            <td><a href="https://codeforces.com/profile/{{ user.handle }}" target="_blank">{{ user.handle }}</a></td>
+            <td><a href="https://codeforces.com/profile/{{ user.handle }}" target="_blank" class="link-to-profile">{{ user.handle }}</a></td>
+            <td><a href="https://www.codechef.com/users/{{ user.codechef_handle }}" target="_blank" class="link-to-profile">{{ user.codechef_handle }}</a></td>
             <td>{{ user.rating }}</td>
         </tr>
-        {% set counter.value = counter.value + 1 %}
     {% endfor %}
 </table>
+
 </br>
                  
   <!--  ************************* Footer Starts Here ************************** -->
