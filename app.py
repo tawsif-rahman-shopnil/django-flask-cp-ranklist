@@ -1,4 +1,6 @@
 from flask import Flask, render_template, jsonify
+from datetime import datetime, timedelta
+import time
 import requests
 import json
 
@@ -27,16 +29,31 @@ def color_class(judge, rating):
 
 @app.route('/')
 def ranklist():
-    url = "YOUR_URL"  # Replace with your URL
+    url = "https://codeforces.com/api/user.ratedList"
     response = requests.get(url)
     data = response.json()
 
-    for user in data:
-        user['color_class'] = color_class(user.get('judge'), user.get('rating'))
+    if data['status'] != "OK":
+        return "Error fetching data from Codeforces API."
 
-    data = sorted(data, key=lambda x: x.get('lup', 0), reverse=True)
+    users = data['result']
 
-    return render_template("ranklist.html", data=data)
+    # Filter users from BAIUST
+    baiust_users = [user for user in users if user.get('organization') == 'BAIUST']
+
+    # Get the timestamp for 3 months ago
+    three_months_ago = (datetime.now() - timedelta(days=90)).timestamp()
+
+    for user in baiust_users:
+        # Check if the user was active in the last 3 months
+        if user.get('lastOnlineTimeSeconds', 0) < three_months_ago:
+            user['rating'] = 0
+
+        user['color_class'] = color_class('cf', user.get('rating'))
+
+    baiust_users = sorted(baiust_users, key=lambda x: (x.get('rating', -1), x.get('handle')), reverse=True)
+
+    return render_template("ranklist.html", data=baiust_users)
 
 if __name__ == '__main__':
     app.run(debug=True)
