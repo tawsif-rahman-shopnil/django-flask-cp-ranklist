@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Programmer's Rank-list</title> 
      <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
+    <link href="static/img/favicon.ico" rel="icon">
+    <link rel="icon" type="image/png" href="static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="static/img/favicon-16x16.png" sizes="16x16">
     <!-- For Apple devices -->
-    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/img/apple-touch-icon.png">
     <!-- For Android Chrome -->
-    <link rel="android-chrome-512x512" sizes="512x512" href="img/android-chrome-512x512.png">
-    <link rel="android-chrome-192x192" sizes="192x192" href="img/android-chrome-192x192.png">
+    <link rel="android-chrome-512x512" sizes="512x512" href="static/img/android-chrome-512x512.png">
+    <link rel="android-chrome-192x192" sizes="192x192" href="static/img/android-chrome-192x192.png">
 
 
     <!-- Google Web Fonts -->
@@ -27,13 +27,14 @@
 
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+    <link href="static/css/table.css" rel="stylesheet">
 
     <!-- Animation Stylesheet -->
-    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="static/css/animate.min.css" rel="stylesheet">
     <style>
         .link-to-profile { text-decoration: none;}
         .cf-newbie { color: gray;}
@@ -79,7 +80,7 @@
    <div class="container-fluid p-0">
     <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
         <a href="index.html" class="navbar-brand ml-lg-3">
-            <img src="img/logo.png" alt="BCC">
+            <img src="static/img/logo.png" alt="BCC">
         </a>
         
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -87,7 +88,8 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav mx-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="index.html" class="nav-item nav-link ">Home</a>
+                    <a href="about.html" class="nav-item nav-link ">About</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Events</a>
                         <div class="dropdown-menu m-0">
@@ -98,7 +100,7 @@
                         </div>
                     </div>
                     <a href="#workshops" class="nav-item nav-link">Workshops</a>
-                    <a href="contact.html" class="nav-item nav-link">CP Ranklist</a>
+                    <a href="contact.html" class="nav-item nav-link active">CP Ranklist</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Executive Panels</a>
                         <div class="dropdown-menu m-0">
@@ -121,18 +123,14 @@
     <!-- Header Start -->
     <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 90px;">
         <div class="container text-center py-5">
-            <h1 class="text-white display-1">About</h1>
-            <div class="d-inline-flex text-white mb-5">
-                <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
-                <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                <p class="m-0 text-uppercase">About</p>
-            </div>
+            <h1 class="text-white display-1">BAIUST Programmer's Ranklist</h1>
         </div>
     </div>
     <!-- Header End -->
    
  <!--  ************************* Gallery Starts Here ************************** -->
-</br>
+ <div class="container-fluid px-0 py-5">
+    <div class="container py-5">
 <table>
     <tr>
         <th>Rank</th>
@@ -155,16 +153,17 @@
         </tr>
     {% endfor %}
 </table>
-
-</br>
-                 
+</div>
+</div>
+</div>
+         
     <!-- Footer Start -->
     <div class="container-fluid position-relative overlay-top bg-dark text-white py-5" style="margin-top: 90px;">
         <div class="container mt-5 pt-5">
             <div class="row">
                 <div class="col-md-4 mb-5">
                     <a href="index.html" class="footer-brand">
-                        <img src="img/logo-wht.png" alt="BCC">
+                        <static/img src="..static/img/logo-wht.png" alt="BCC">
                     </a>
                     <p class="m-0">The Bangladesh Army International University of Science and Technology (BAIUST) Computer Club is a student-led organization dedicated to promoting the study and understanding of computer science and technology among the students of BAIUST.</p>
                 </div>
@@ -208,13 +207,13 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="static/lib/easing/easing.min.js"></script>
+    <script src="static/lib/waypoints/waypoints.min.js"></script>
+    <script src="static/lib/counterup/counterup.min.js"></script>
+    <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="static/js/main.js"></script>
 </body>
 
 </html>
