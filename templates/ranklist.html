@@ -6,18 +6,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Programmer's Rank-list</title> 
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <link rel="shortcut icon" href="static/assets/images/fav.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="static/assets/images/fav.jpg">
-    <link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/assets/css/all.min.css">
-    <link rel="stylesheet" href="static/assets/css/animate.css">
-    <link rel="stylesheet" href="static/assets/plugins/slider/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="static/assets/plugins/slider/css/owl.theme.default.css">
-    <link rel="stylesheet" type="text/css" href="static/assets/css/style.css" 
+     <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
+    <!-- For Apple devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <!-- For Android Chrome -->
+    <link rel="android-chrome-512x512" sizes="512x512" href="img/android-chrome-512x512.png">
+    <link rel="android-chrome-192x192" sizes="192x192" href="img/android-chrome-192x192.png">
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
     
-    />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Animation Stylesheet -->
+    <link href="css/animate.min.css" rel="stylesheet">
     <style>
         .link-to-profile { text-decoration: none;}
         .cf-newbie { color: gray;}
@@ -39,91 +55,81 @@
         .cc-6star { color: orange;}
         .cc-7star { color: red;}
     </style>
+
 </head>
 
 <body>
-
-<header class="continer-fluid ">
-    <div  class="header-top">
-        <div class="container">
-            <div class="row col-det">
-                <div class="col-lg-6 d-none d-lg-block">
-                    <ul class="ulleft">
-                        <li>
-                            <i class="far fa-envelope"></i>
-                            computerclub@baiust.edu.bd
-                            <span>|</span></li>
-                        <li>
-                            <i class="fas fa-phone-volume"></i>
-                            +8801784-337547</li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 folouws">
-                  
-                    <ul class="ulright">
-                       <li> <small>Folow Us </small>:</li>
-                        <li>
-                            <a href="https://www.facebook.com/baiustcomputerclub"><i class="fab fa-facebook-square"></i>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/baiustcomclub"><i class="fab fa-twitter-square"></i>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/company/baiustcomputerclub"><i class="fab fa-linkedin"></i>
-                        </li>
-                    </ul>
-                </div>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark">
+        <div class="row py-2 px-lg-5">
+            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center text-white">
+                    <small><i class="fa fa-phone-alt mr-2"></i>+8801784-337547</small>
+                    <small class="px-3">|</small>
+                    <small><i class="fa fa-envelope mr-2"></i>computerclub@baiust.edu.bd</small>
                 </div>
             </div>
         </div>
     </div>
-    <div id="menu-jk" class="header-bottom">
-        <div class="container">
-            <div class="row nav-row">
-                <div class="col-lg-3 col-md-12 logo">
-                    <a href="index.html">
-                        <img src="static/assets/images/logo.png" alt="bcc">
-                        <a data-toggle="collapse" data-target="#menu" href="#menu"><i class="fas d-block d-lg-none  small-menu fa-bars"></i></a>
-                    </a>
 
-                </div>
-                <div id="menu" class="col-lg-9 col-md-12 d-none d-lg-block nav-col">
-
-                            <ul class="navbad">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="about_us.html">About Us</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="panel.html">Executive Panels</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Blog</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="register.php">Membership Registration</a>
-                                </li>
-                            </ul>
+    <!-- Topbar End -->
 
 
-                </div>
-            </div>
-        </div>
-    </div> 
-</header>
- 
-  <!--  ************************* Page Title Starts Here ************************** -->
+   <!-- Navbar Start --> 
+   <div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+        <a href="index.html" class="navbar-brand ml-lg-3">
+            <img src="img/logo.png" alt="BCC">
+        </a>
         
-  <div class="page-nav no-margin row">
-    <div class="container">
-        <div class="row">
-            <h2>BAIUST Programmer's Rank-list</h2>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav mx-auto py-0">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Events</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="panel.html" class="dropdown-item">Upcoming Events</a>
+                            <a href="csefest.html" class="dropdown-item">CSE Fest 2022</a>
+                            <a href="computenigma.html" class="dropdown-item">Computenigma 2020</a>
+                            <a href="nhpc.html" class="dropdown-item">NHPC 2017</a>
+                        </div>
+                    </div>
+                    <a href="#workshops" class="nav-item nav-link">Workshops</a>
+                    <a href="contact.html" class="nav-item nav-link">CP Ranklist</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Executive Panels</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="panel.html" class="dropdown-item">6th Executive Panel</a>
+                            <a href="panel.html" class="dropdown-item">5th Executive Panel</a>
+                            <a href="panel.html" class="dropdown-item">4th Executive Panel</a>
+                            <a href="panel.html" class="dropdown-item">3rd Executive Panel</a>
+                            <a href="panel.html" class="dropdown-item">2nd Executive Panel</a>
+                            <a href="panel.html" class="dropdown-item">1st Executive Panel</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Fresher's Corner</a>
+                </div>
+                <a href="" class="btn btn-primary py-2 px-4">Membership Registration</a>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 90px;">
+        <div class="container text-center py-5">
+            <h1 class="text-white display-1">About</h1>
+            <div class="d-inline-flex text-white mb-5">
+                <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
+                <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                <p class="m-0 text-uppercase">About</p>
+            </div>
         </div>
     </div>
-</div>
-
+    <!-- Header End -->
    
  <!--  ************************* Gallery Starts Here ************************** -->
 </br>
@@ -152,66 +158,63 @@
 
 </br>
                  
-  <!--  ************************* Footer Starts Here ************************** -->
-         
-     
-  <footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-sm-12">
-                <div class="panelhero">
-                    <img src="static/assets/images/hero.png" alt="bcc">
+    <!-- Footer Start -->
+    <div class="container-fluid position-relative overlay-top bg-dark text-white py-5" style="margin-top: 90px;">
+        <div class="container mt-5 pt-5">
+            <div class="row">
+                <div class="col-md-4 mb-5">
+                    <a href="index.html" class="footer-brand">
+                        <img src="img/logo-wht.png" alt="BCC">
+                    </a>
+                    <p class="m-0">The Bangladesh Army International University of Science and Technology (BAIUST) Computer Club is a student-led organization dedicated to promoting the study and understanding of computer science and technology among the students of BAIUST.</p>
                 </div>
-                <h2>About Us</h2>
-                <p>
-                    The Bangladesh Army International University of Science and Technology (BAIUST) Computer Club is a student-led organization dedicated to promoting the study and understanding of computer science and technology among the students of BAIUST.
-                </p>
-            </div>
-            <div class="col-md-4 col-sm-12">
-                <h2>Useful Links</h2>
-                <ul class="list-unstyled link-list">
-                    <li><a ui-sref="about" href="#/about">About us</a><i class="fa fa-angle-right"></i></li>
-                    <li><a ui-sref="gallery" href="#/gallery">Gallery</a><i class="fa fa-angle-right"></i></li>
-                    <li><a ui-sref="contact" href="#/contact">Contact us</a><i class="fa fa-angle-right"></i></li>
-                </ul>
-            </div>
-            <div class="col-md-4 col-sm-12 map-img">
-                <h2>Contact Us</h2>
-                <address class="md-margin-bottom-40">
-                    BAIUST Computer Club <br>
-                    Cumilla Cantonment <br>
-                    Cumilla <br>
-                    Phone: +8801784-337547<br>
-                    Email: <a href="mailto:computerclub@baiust.edu.bd" class="">computerclub@baiust.edu.bd</a><br>
-                </address>
-
+                <div class="col-md-4 mb-5">
+                    <h3 class="text-white mb-4">Contact Us</h3>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>Syedpur,BAIUST Permanent Campus</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+8801784-337547</p>
+                    <p><i class="fa fa-envelope mr-2"></i>computerclub@baiust.edu.bd</p>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <h3 class="text-white mb-4">Follow Us</h3>
+                    <p><a class="text-white mr-4" href="https://www.facebook.com/baiustcomputerclub"><i class="fab fa-facebook-f"></i>  /baiustcomputerclub</a></p>
+                    <p><a class="text-white mr-4" href="https://twitter.com/baiustcomclub"><i class="fab fa-twitter"></i>  /baiustcomclub</a></p>
+                    <p><a class="text-white mr-4" href="https://www.linkedin.com/company/baiustcomputerclub"><i class="fab fa-linkedin-in"></i>  /baiustcomputerclub</a></p>    
+                    <p><a class="text-white mr-4" href="https://www.youtube.com/@BAIUSTComputerClub"><i class="fab fa-youtube"></i>  /@BAIUSTComputerClub</a></p>
+                </div>
             </div>
         </div>
     </div>
-    
-</div>
-</footer>
-<div class="copy">
+    <div class="container-fluid bg-dark text-white-50 border-top py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
         <div class="container">
-            <a></a>All Rights Reserved</a>
-            
-            <span>
-            <a href="https://www.linkedin.com/company/baiustcomputerclub"><i class="fab fa-linkedin"></i></a>
-            <a href="https://twitter.com/baiustcomclub"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.facebook.com/baiustcomputerclub"><i class="fab fa-facebook-f"></i></a>
-    </span>
+            <div class="row">
+                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                    <p class="m-0">&copy;Copyright Reserved by <a class="text-white" href="#">BAIUST Computer Club</a> 
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-right">
+                    <p class="m-0"> <a class="text-white" href="team.html">Developer Team</a>
+                    </p>
+                </div>
+            </div>
         </div>
-
     </div>
-      
+    <!-- Footer End -->
 
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
-
-<script src="static/assets/js/jquery-3.2.1.min.js"></script>
-<script src="static/assets/js/popper.min.js"></script>
-<script src="static/assets/js/bootstrap.min.js"></script>
-<script src="static/assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
-<script src="static/assets/plugins/slider/js/owl.carousel.min.js"></script>
-<script src="static/assets/js/script.js"></script>
 
 </html>
