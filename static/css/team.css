@@ -1,0 +1,216 @@
+/*----Font----*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none !important;
+    outline: none;
+}
+
+/* ------------------------------------------- team-1 -------------------------------------- */
+
+.team-1 {
+    color: #0f105e;
+}
+
+.team-1 .text-primary {
+    color: #28a745 !important;
+}
+
+.team-1 .box-shadow {
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+}
+
+.team-1 {
+    display: flex;
+    align-items: center;
+    
+}
+
+.team-1 .team-heading::before {
+    content: "";
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #28a745, transparent);
+    position: absolute;
+    bottom: -14px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.team-1 .team-social {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    text-align: center;
+    opacity: 0;
+    transform: translate(-20px, -20px);
+    transition: all 0.3s ease-out;
+}
+
+.team-1 .team-social li {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+.team-1 .team-box .team-name {
+    color: #0f105e;
+    transition: all 0.3s ease;
+}
+
+.team-1 .team-box .team-name:hover {
+    color: #28a745;
+}
+
+.team-1 .team-box .team-img img {
+    transition: all 0.3s ease;
+}
+
+.team-1 .team-box:hover .team-img img {
+    transform: scale(1.2);
+}
+
+.team-1 .team-box:hover .team-img .team-social {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition-delay: 0.15s;
+}
+
+.team-1 .team-box:hover .team-img .bg-overlay {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .team-1 {
+        height: auto;
+        padding: 60px 0;
+    }
+}
+
+.main {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.profile-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.profile-card {
+  position: relative;
+  font-family: sans-serif;
+  width: 220px;
+  height: 220px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 22px #3336;
+  transition: .6s;
+  margin-bottom: 25px;
+  margin: 0 25px;
+}
+
+.profile-card.top-card {
+  position: relative;
+  font-family: sans-serif;
+  width: 220px;
+  height: 220px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 22px #3336;
+  transition: .6s;
+  margin-bottom: 25px;
+}
+
+.profile-card:hover {
+  border-radius: 10px;
+  height: 260px;
+}
+
+.profile-card .img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: .6s;
+  z-index: 99;
+}
+
+.profile-card:hover .img {
+  transform: translateY(-60px);
+}
+
+.img img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 22px #3336;
+  transition: .6s;
+}
+
+.profile-card:hover img {
+  border-radius: 10px;
+}
+
+.caption {
+  text-align: center;
+  transform: translateY(-80px);
+  opacity: 0;
+  transition: .6s;
+}
+
+.profile-card:hover .caption {
+  opacity: 1;
+}
+
+.caption h3 {
+  font-size: 21px;
+  font-family: sans-serif;
+}
+
+.caption p {
+  font-size: 15px;
+  color: #0c52a1;
+  font-family: sans-serif;
+  margin: 2px 0 9px 0;
+}
+
+.caption .social-links a {
+  color: #333;
+  margin-right: 15px;
+  font-size: 21px;
+  transition: .6s;
+}
+
+.social-links a:hover {
+  color: #0c52a1;
+}
+
+.centered-paragraph {
+  text-align: center;
+  margin-bottom: 25px;
+}
