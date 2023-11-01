@@ -13,7 +13,7 @@ It was initially developed in Django Flask to retrieve data from the CodeForces 
 
 Follow these steps to set up and run a Flask app:
 
-1. **Install Flask**:
+**Install Flask**:
 
  Use the following command to install Flask:
    ```bash
