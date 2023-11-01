@@ -44,4 +44,4 @@ This website serves as the final year Project / Thesis (CSE-400).
 ![screencapture-127-0-0-1-5000-2023-11-02-02_34_40](https://github.com/BAIUST-Computer-Club/django-cp-ranklist-draft/assets/76777358/a57de35c-4c25-4f2d-94a6-8e39a16faf99)
 
 
-Thank you for visiting our repository!
+Thank you for visiting my repository!
