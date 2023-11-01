@@ -2,7 +2,7 @@
 
 Welcome to the Repository of the BAIUST Competitive Programmers' Ranklist.
 
-It was initially developed in Django Flask to retrieve data from the CodeForces API. However, to meet database requirements and ensure server compatibility, it was later converted to PHP.
+It is developed in Django Flask to retrieve data from the CodeForces API. However, to meet database requirements and ensure server compatibility, it was later converted to PHP.
 
 [Production Website Repository](https://github.com/BAIUST-Computer-Club/bcc_web)
 
