@@ -1,10 +1,12 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template
 from datetime import datetime, timedelta
-import time
 import requests
-import json
 
 app = Flask(__name__)
+
+# Replace 'your_api_key' and 'your_api_secret' with your actual Codeforces API key and secret
+CODEFORCES_API_KEY = '8d2638e3c29c506b17a1b7cc45f9e70619d10d3e'
+CODEFORCES_API_SECRET = 'e9e07d34373f8781a7bf28f6a08a9302170c7e1e'
 
 def color_class(judge, rating):
     if judge == 'cf':
@@ -30,11 +32,22 @@ def color_class(judge, rating):
 @app.route('/')
 def ranklist():
     url = "https://codeforces.com/api/user.ratedList"
-    response = requests.get(url)
-    data = response.json()
+    
+    # Add the API key and secret to the request headers
+    headers = {'key': CODEFORCES_API_KEY, 'secret': CODEFORCES_API_SECRET}
+    
+    response = requests.get(url, headers=headers)
+    
+    if response.status_code != 200:
+        return f"Error fetching data from Codeforces API. Status code: {response.status_code}"
+
+    try:
+        data = response.json()
+    except ValueError:
+        return "Error parsing JSON data from Codeforces API."
 
     if data['status'] != "OK":
-        return "Error fetching data from Codeforces API."
+        return f"Codeforces API error: {data['comment']}"
 
     users = data['result']
 
